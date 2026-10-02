@@ -1,0 +1,7 @@
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { ArrowRight } from "lucide-react";
+import { CTA, PageHero } from "@/components/fazero/Sections";
+import { pageHead } from "@/lib/seo";
+import { locations } from "@/lib/fazero-data";
+export const Route=createFileRoute("/presence")({head:()=>pageHead("Global Presence | Fazero International","Explore how Fazero supports business growth across India, Dubai, the UAE, Malaysia and the USA.","/presence"),component:Presence});
+function Presence(){return <><PageHero eyebrow="Markets we serve" title="Local Understanding. International Ambition." body="Fazero supports growth across different market contexts through research, positioning, customer acquisition, technology and sales. Market presence does not imply a physical office."/><section className="py-24"><div className="mx-auto grid max-w-[1440px] border-l border-t border-border px-5 sm:grid-cols-2 lg:grid-cols-4 lg:px-10">{Object.entries(locations).map(([slug,l],i)=><Link key={slug} to="/locations/$slug" params={{slug}} className="group min-h-72 border-b border-r border-border p-7 hover:bg-secondary"><span className="text-xs text-primary">0{i+1}</span><h2 className="mt-16 font-display text-4xl">{l.name}</h2><p className="mt-4 text-sm leading-6 text-muted-foreground">{l.intro}</p><ArrowRight className="mt-7 size-4 text-primary transition-transform group-hover:translate-x-2"/></Link>)}</div></section><CTA/></>}

@@ -1,0 +1,52 @@
+export const services = [
+  { name: "Digital Marketing", short: "Audience → Attention → Lead → Customer", description: "Performance marketing, social media, paid advertising, content, campaign management, lead generation and conversion optimization." },
+  { name: "Referral Marketing", short: "Customer → Referral → Prospect → Customer", description: "Referral programs, partner networks, customer referrals and relationship marketing." },
+  { name: "Technology Solutions", short: "Data → System → Automation → Scale", description: "CRM, websites, applications, automation, integrations and business platforms." },
+  { name: "AI Implementation", short: "Data → AI → Decision → Action", description: "AI automation for sales, marketing, customer support, analytics and workflows." },
+  { name: "SEO", short: "Search → Discovery → Website → Lead", description: "Technical SEO, local SEO, content, keyword strategy, internal linking and search analytics." },
+  { name: "AEO", short: "Question → Answer → Discovery", description: "Answer Engine Optimization through question-based content, semantic structure and clear answers." },
+  { name: "GEO", short: "Business Entity → AI Understanding → Visibility", description: "Generative Engine Optimization for AI-readable content, entity clarity and search visibility." },
+  { name: "Business Strategy", short: "Insight → Strategy → Execution → Growth", description: "Market research, positioning, competitive analysis, go-to-market planning and expansion." },
+  { name: "Sales Groom-Up", short: "Lead → Qualification → Conversation → Conversion", description: "Sales processes, CRM, follow-up, communication, training and conversion improvement." },
+] as const;
+
+export const totals = [
+  ["2,449+", "Leads Generated"], ["236", "Confirmed Conversions"], ["₹173,104", "Total Ad Spend"], ["₹70.68", "Blended Cost Per Lead"],
+  ["497,905", "People Reached"], ["9.6%", "Blended Conversion Rate"], ["₹733.49", "Blended Cost Per Conversion"], ["5", "Client Programs"],
+] as const;
+
+export type CaseStudy = {
+  id: string; client: string; industry: string; category: string; campaign: string; period: string; duration?: string;
+  leads: string; spend: string; cpr: string; reach: string; impressions: string; frequency: string; conversions: string;
+  rate: string; cpc: string; cpm: string; ctr?: string; clickCost?: string;
+};
+export const caseStudies: CaseStudy[] = [
+  { id:"01", client:"LMR Property", industry:"Real Estate & Property Development", category:"Real Estate", campaign:"Meta Lead Ads — Consolidated Lead Campaign", period:"1–10 September 2026", leads:"17", spend:"₹1,695", cpr:"₹99.70", reach:"11,816", impressions:"20,764", frequency:"1.76x", conversions:"3", rate:"17.6%", cpc:"₹565", cpm:"₹81.63", ctr:"0.96%", clickCost:"₹8.52" },
+  { id:"02", client:"SSM Interiors", industry:"Interior Design", category:"Interior Design", campaign:"Meta Lead Ads — Consolidated Campaign", period:"28 August 2025 – 11 September 2026", duration:"Approximately 12.5 months", leads:"474", spend:"₹34,155", cpr:"₹72.06", reach:"128,880", impressions:"341,189", frequency:"2.65x", conversions:"37", rate:"7.8%", cpc:"₹923.11", cpm:"₹100.10" },
+  { id:"03", client:"Cauvery Construction", industry:"Residential & Commercial Construction", category:"Construction", campaign:"Meta Lead Ads — Consolidated Campaign", period:"15 August 2025 – 11 September 2026", leads:"1,043", spend:"₹76,205", cpr:"₹73.06", reach:"294,206", impressions:"1,285,791", frequency:"4.37x", conversions:"87", rate:"8.3%", cpc:"₹875.92", cpm:"₹59.27" },
+  { id:"04", client:"A-Oorvam Interior", industry:"Interior Design", category:"Interior Design", campaign:"Meta Lead Ads — Consolidated Campaign", period:"19 August – 11 September 2026", duration:"First 3.5 weeks live", leads:"57", spend:"₹2,288", cpr:"₹40.14", reach:"12,543", impressions:"22,227", frequency:"1.77x", conversions:"15", rate:"26.3%", cpc:"₹152.53", cpm:"₹102.94" },
+  { id:"05", client:"QuickTech", industry:"Technology & Services", category:"Technology", campaign:"Meta Lead Ads — New Leads Ad Set", period:"24 November 2025 – 11 September 2026", duration:"Approximately 9.5 months", leads:"858", spend:"₹58,762", cpr:"₹68.49", reach:"50,460", impressions:"201,391", frequency:"3.99x", conversions:"94", rate:"11.0%", cpc:"₹625.13", cpm:"₹291.78" },
+];
+export const resultDisclaimer = "Results shown are based on the reporting periods and client-confirmed conversion data documented in the Fazero International Client Results Portfolio. Individual results vary by business, market, offer, audience and campaign conditions.";
+
+export const locations: Record<string, {name:string; title:string; intro:string; themes:string[]; insight:string}> = {
+  trichy:{name:"Trichy",title:"Digital Marketing & Business Growth Consultancy in Trichy",intro:"Fazero helps Trichy businesses connect local visibility with stronger lead generation, sales follow-up and practical growth systems.",themes:["Local SEO","Lead generation","Business strategy","AI implementation","Technology","Sales"],insight:"For local businesses, healthcare, restaurants, real estate, education, professional services and SMEs, the opportunity starts with clearer positioning and a measurable path from search to enquiry."},
+  chennai:{name:"Chennai",title:"Digital Marketing & Business Growth Consultancy in Chennai",intro:"Fazero supports Chennai businesses with integrated acquisition, technology and sales strategies designed for complex, competitive markets.",themes:["B2B growth","Technology & SaaS","Healthcare","Real estate","Professional services","Startup & enterprise strategy"],insight:"Chennai’s varied business landscape rewards focused positioning, useful content, disciplined paid acquisition and a connected sales process."},
+  "tamil-nadu":{name:"Tamil Nadu",title:"Business Growth & Digital Marketing Consultancy in Tamil Nadu",intro:"Build a connected growth system across Tamil Nadu with market-aware digital visibility, lead generation, CRM and sales execution.",themes:["Regional SEO","Customer acquisition","Campaign strategy","CRM systems","Sales enablement","Market expansion"],insight:"Regional growth works best when local market knowledge, language-aware communication and consistent measurement support one strategy."},
+  india:{name:"India",title:"Business Growth, Marketing & AI Consultancy in India",intro:"Fazero helps Indian businesses acquire customers, modernize their growth systems and prepare for expansion into new markets.",themes:["National visibility","B2B lead generation","AI adoption","Digital platforms","Sales systems","International expansion"],insight:"India’s scale creates opportunity and complexity. A clear market segment, credible digital presence and structured follow-up turn reach into sustainable growth."},
+  dubai:{name:"Dubai",title:"Digital Marketing & Business Growth Consultancy in Dubai",intro:"Fazero helps businesses approach Dubai with informed positioning, discoverability, lead generation and disciplined sales follow-up.",themes:["Digital marketing","SEO","Lead generation","AI","Business strategy","Market expansion"],insight:"Winning clients in Dubai requires more than advertising: local positioning, search visibility, LinkedIn, referral networks, partnerships, CRM, prompt follow-up and consistent sales execution all matter."},
+  uae:{name:"UAE",title:"Business Growth & Customer Acquisition Consultancy in the UAE",intro:"Connect digital acquisition, relationship-led growth and scalable sales systems for opportunities across the UAE.",themes:["Market positioning","Search visibility","Partnerships","Paid acquisition","CRM","Sales follow-up"],insight:"A market-specific offer and trusted network can strengthen acquisition across the UAE, supported by data, automation and clear accountability."},
+  malaysia:{name:"Malaysia",title:"International Business Growth Consultancy for Malaysia",intro:"Fazero supports market exploration and customer-acquisition planning for businesses considering opportunities in Malaysia.",themes:["Market research","Positioning","Digital presence","Lead generation","Partnership strategy","Technology"],insight:"Entry planning should validate demand, audience, channels and partnership potential before scaling investment."},
+  usa:{name:"USA",title:"International Growth Strategy & Digital Consultancy for the USA",intro:"Fazero helps businesses structure a research-led approach to visibility, lead generation and sales development in the USA.",themes:["Market research","B2B acquisition","SEO & content","AI workflows","Sales systems","Digital infrastructure"],insight:"The USA is not one uniform market. Segment selection, differentiated positioning and a focused go-to-market system are essential first steps."},
+};
+
+export const resources = [
+  {slug:"how-to-get-clients-in-dubai", title:"How to Get Clients in Dubai", category:"Getting Clients", excerpt:"A practical system for positioning, visibility, partnerships, lead generation and sales follow-up in Dubai."},
+  {slug:"how-to-get-clients-in-india", title:"How to Get Clients in India", category:"Getting Clients", excerpt:"Build a focused acquisition system for India’s diverse, competitive markets."},
+  {slug:"indian-company-get-dubai-clients", title:"How Can an Indian Company Get Dubai Clients?", category:"Market Expansion", excerpt:"Move from market research to customer acquisition with a clear India-to-Dubai roadmap."},
+  {slug:"how-to-generate-b2b-leads", title:"How to Generate B2B Leads", category:"Sales", excerpt:"Connect positioning, useful content, outreach and follow-up into one measurable pipeline."},
+  {slug:"seo-vs-aeo-vs-geo", title:"SEO vs AEO vs GEO", category:"Search", excerpt:"Understand how search visibility, answer engines and generative systems work together."},
+  {slug:"ai-customer-acquisition", title:"How AI Can Improve Customer Acquisition", category:"AI", excerpt:"Use AI to support research, qualification, communication and workflow automation."},
+  {slug:"build-referral-marketing-system", title:"How to Build a Referral Marketing System", category:"Referral Marketing", excerpt:"Turn trusted relationships into a repeatable, measurable source of opportunities."},
+  {slug:"expand-indian-business-into-dubai", title:"How to Expand an Indian Business Into Dubai", category:"Market Expansion", excerpt:"A staged approach to validation, positioning, visibility, acquisition and sales."},
+] as const;

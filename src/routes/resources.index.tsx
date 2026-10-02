@@ -1,0 +1,7 @@
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { ArrowRight } from "lucide-react";
+import { CTA, PageHero } from "@/components/fazero/Sections";
+import { resources } from "@/lib/fazero-data";
+import { pageHead } from "@/lib/seo";
+export const Route=createFileRoute("/resources/")({head:()=>pageHead("Growth Resources | Fazero International","Practical resources about getting clients, SEO, AEO, GEO, AI, referral marketing and international market expansion.","/resources"),component:Resources});
+function Resources(){return <><PageHero eyebrow="Growth intelligence" title="Useful Thinking for Ambitious Businesses." body="Practical, direct guidance for customer acquisition, discoverability, sales systems and market expansion."/><section className="py-24"><div className="mx-auto grid max-w-[1440px] border-l border-t border-border px-5 md:grid-cols-2 lg:grid-cols-3 lg:px-10">{resources.map((r,i)=><Link key={r.slug} to="/resources/$slug" params={{slug:r.slug}} className="group min-h-72 border-b border-r border-border p-7 hover:bg-secondary"><span className="text-xs text-primary">0{i+1}</span><p className="label mt-10">{r.category}</p><h2 className="mt-4 font-display text-3xl group-hover:text-primary">{r.title}</h2><p className="mt-4 text-sm leading-7 text-muted-foreground">{r.excerpt}</p><ArrowRight className="mt-7 size-4 text-primary"/></Link>)}</div></section><CTA/></>}
